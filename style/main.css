@@ -1,0 +1,73 @@
+* {
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------- 
+   Mobile_First
+-----------------------------------------------------*/
+#timecontainer {
+    margin-top: 45%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: arial, sans-serif;
+    font-size: 4em;
+}
+
+#datecontainer {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: serif;
+    font-size: 1.5em;
+    
+}
+
+
+/* -------------------------------------------------- 
+   Tablet
+-----------------------------------------------------*/
+
+@media only screen and (min-width: 600px){
+    
+    #timecontainer {
+        margin-top: 35%;
+        text-align: center;
+        color: #FFFFFF;
+        font-family: arial, sans-serif;
+        font-size: 7em;
+    }
+
+    #datecontainer {
+        text-align: center;
+        color: #FFFFFF;
+        font-family: serif;
+        font-size: 3em;
+    
+    }
+
+
+}
+
+/* -------------------------------------------------- 
+   Desktop
+-----------------------------------------------------*/
+
+@media only screen and (min-width: 900px){
+
+    
+    #timecontainer {
+        margin-top: 20%;
+        text-align: center;
+        color: #FFFFFF;
+        font-family: arial, sans-serif;
+        font-size: 10em;
+    }
+
+    #datecontainer {
+        text-align: center;
+        color: #FFFFFF;
+        font-family: serif;
+        font-size: 3em;
+    
+    }
+    
+}
