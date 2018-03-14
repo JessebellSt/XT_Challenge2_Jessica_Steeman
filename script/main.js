@@ -72,6 +72,46 @@
 		
             return monthNames[m];
         }
+        
+        
+        
     });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        var now = new Date();
+        var hours = now.getHours();
 
+
+        //18-20 night
+        if (hours > 17 && hours < 21){
+            document.getElementById("body").style.backgroundColor = "orange";
+            document.getElementById("body").style.backgroundSize = "cover";
+        }
+        
+        
+        //21-5 night
+        else if (hours > 20 || hours < 6){
+            document.getElementById("body").style.backgroundColor= "darkblue";
+            document.getElementById("body").style.backgroundSize = "cover";
+        }
+
+        //9-17 day
+        else if (hours > 8 && hours < 18){
+            document.getElementById("body").style.backgroundImage = "url('../images/day.jpg')";
+            document.getElementById("body").style.backgroundSize = "cover";
+        }
+
+        //6-8 day
+        else if (hours > 5 && hours < 9){
+            document.getElementById("body").style.backgroundColor= "lightblue";
+            document.getElementById("body").style.backgroundSize = "cover";
+        }
+        else {
+            document.write ('<body style="background-color: white">');
+            document.getElementById("body").style.backgroundSize = "cover";
+        }
+        
+    });
+                              
+    
 })();
