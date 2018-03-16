@@ -1,10 +1,12 @@
 (function () {
     'use strict';
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function updateClock () {
         var currentTime = document.getElementById('time'),
             currentDate = document.getElementById('date');
 	
+        
+        
         setInterval(function () {
             var d = new Date();
 	
@@ -33,6 +35,7 @@
             currentTime.innerHTML = hours + sep + minutes + ' ' + ampm;
             currentDate.textContent = day + ' ' + date + ' ' + month;
         }, 1000);
+        
 	
         function formatDay(d) {
             d = parseInt(d, 7);
@@ -45,9 +48,8 @@
 		
 	
             var dayNames = [
-                'Maandag', 'Dinsdag', 'Woensdag',
-                'Donderdag', 'Vrijdag', 'Zaterdag', 
-                'Zondag'
+                'Zondag', 'Maandag', 'Dinsdag', 'Woensdag',
+                'Donderdag', 'Vrijdag', 'Zaterdag'
             ];
 		
             return dayNames[d];
@@ -73,7 +75,9 @@
             return monthNames[m];
         }
         
-        
+        timeline.call(updateClock)
+			.from('#time', 0.7, { opacity: 0})
+			.to('#time', 0.3, { opacity: 100});
         
     });
     
@@ -81,36 +85,21 @@
         var now = new Date();
         var hours = now.getHours();
 
-
-        //18-20 night
-        if (hours > 17 && hours < 21){
-            document.getElementById("body").style.backgroundColor = "orange";
-            document.getElementById("body").style.backgroundSize = "cover";
+        
+        //19-6 night
+        if (hours > 18 && hours < 7){
+            document.getElementById("body").style.backgroundImage = "url('../images/londonnight.jpg')";
+            document.getElementById("body").style.backgroundSize = "1500px 900px";
         }
         
         
-        //21-5 night
-        else if (hours > 20 || hours < 6){
-            document.getElementById("body").style.backgroundColor= "darkblue";
-            document.getElementById("body").style.backgroundSize = "cover";
+        //7-18 dag
+        else if (hours > 6|| hours < 19){
+            document.getElementById("body").style.backgroundImage = "url('../images/londonday.jpg')";
+            document.getElementById("body").style.backgroundSize = "1500px 900px";
         }
-
-        //9-17 day
-        else if (hours > 8 && hours < 18){
-            document.getElementById("body").style.backgroundImage = "url('../images/day.jpg')";
-            document.getElementById("body").style.backgroundSize = "cover";
-        }
-
-        //6-8 day
-        else if (hours > 5 && hours < 9){
-            document.getElementById("body").style.backgroundColor= "lightblue";
-            document.getElementById("body").style.backgroundSize = "cover";
-        }
-        else {
-            document.write ('<body style="background-color: white">');
-            document.getElementById("body").style.backgroundSize = "cover";
-        }
-        
+       
+       
     });
                               
     
