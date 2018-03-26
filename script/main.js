@@ -88,7 +88,7 @@
         
         //19-6 night
         if (hours > 18 && hours < 7){
-            document.getElementById("body").style.backgroundImage = "url('https://github.com/JessebellSt/XT_Challenge2_Jessica_Steeman/blob/master/images/londonnight.jpg')";
+            document.getElementById("body").style.backgroundImage = "url('../images/londonnight.jpg')";
             document.getElementById("body").style.backgroundSize = "1500px 900px";
             document.getElementById("body").style.backgroundColor = "darkblue";
         }
@@ -96,7 +96,7 @@
         
         //7-18 dag
         else if (hours > 6|| hours < 19){
-            document.getElementById("body").style.backgroundImage = "url('https://github.com/JessebellSt/XT_Challenge2_Jessica_Steeman/blob/master/images/londonday.jpg')";
+            document.getElementById("body").style.backgroundImage = "url('../images/londonday.jpg')";
             document.getElementById("body").style.backgroundSize = "1500px 900px";
             document.getElementById("body").style.backgroundColor = "lightblue";
         }
