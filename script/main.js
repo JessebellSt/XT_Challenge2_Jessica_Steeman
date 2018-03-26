@@ -95,7 +95,7 @@
         
         
         //7-18 dag
-        else if (hours > 6|| hours < 19){
+        else if (hours > 6 && hours < 19){
             document.getElementById("body").style.backgroundImage = "url('../images/londonday.jpg')";
             document.getElementById("body").style.backgroundSize = "1500px 900px";
             document.getElementById("body").style.backgroundColor = "#def9fb";
