@@ -90,7 +90,7 @@
         if (hours > 18 && hours < 7){
             document.getElementById("body").style.backgroundImage = "url('../images/londonnight.jpg')";
             document.getElementById("body").style.backgroundSize = "1500px 900px";
-            document.getElementById("body").style.backgroundColor = "darkblue";
+            document.getElementById("body").style.backgroundColor = "#28314b";
         }
         
         
@@ -98,7 +98,7 @@
         else if (hours > 6|| hours < 19){
             document.getElementById("body").style.backgroundImage = "url('../images/londonday.jpg')";
             document.getElementById("body").style.backgroundSize = "1500px 900px";
-            document.getElementById("body").style.backgroundColor = "lightblue";
+            document.getElementById("body").style.backgroundColor = "#def9fb";
         }
        
        
