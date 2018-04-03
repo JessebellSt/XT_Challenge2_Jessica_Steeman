@@ -1,73 +1,192 @@
 * {
-    margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* -------------------------------------------------- 
-   Mobile_First
------------------------------------------------------*/
-#timecontainer {
-    margin-top: 45%;
-    text-align: center;
-    color: #FFFFFF;
-    font-family: arial, sans-serif;
-    font-size: 4em;
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
-#datecontainer {
-    text-align: center;
-    color: #FFFFFF;
-    font-family: serif;
-    font-size: 1.5em;
-    
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-/* -------------------------------------------------- 
-   Tablet
------------------------------------------------------*/
+/* --------------------------------------
 
+Mobile_Layout
+
+----------------------------------------*/
+
+.clock {
+    height: 75px;
+    color: white;
+    font-size: 5em;
+    font-family: sans-serif;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.clock::before, .clock::after {
+    content: '';
+    width: 7ch;
+    height: 1vh;
+    position: absolute;
+    z-index: 2;
+}
+
+.clock::after {
+    bottom: 0;
+}
+
+.clock > div {
+    display: flex;
+    justify-content: center;
+}
+
+.tick {
+  line-height: 75px;
+}
+
+.tick-hidden {
+  opacity: 0;
+}
+
+.move {
+  animation: move linear 1s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-13vh);
+  }
+}
+
+/* --------------------------------------
+
+Tablet_Layout
+
+----------------------------------------*/
 @media only screen and (min-width: 600px){
     
-    #timecontainer {
-        margin-top: 35%;
-        text-align: center;
-        color: #FFFFFF;
-        font-family: arial, sans-serif;
-        font-size: 7em;
-    }
-
-    #datecontainer {
-        text-align: center;
-        color: #FFFFFF;
-        font-family: serif;
-        font-size: 3em;
-    
-    }
-
-
+    .clock {
+        height: 150px;
+        color: white;
+        font-size: 8em;
+        font-family: sans-serif;
+        display: flex;
+        position: relative;
+        overflow: hidden;
 }
 
-/* -------------------------------------------------- 
-   Desktop
------------------------------------------------------*/
+.clock::before, .clock::after {
+    content: '';
+    width: 7ch;
+    height: 1vh;
+    position: absolute;
+    z-index: 2;
+}
+
+.clock::after {
+    bottom: 0;
+}
+
+.clock > div {
+    display: flex;
+    justify-content: center;
+}
+
+.tick {
+  line-height: 150px;
+}
+
+.tick-hidden {
+  opacity: 0;
+}
+
+.move {
+  animation: move linear 1s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-19vh);
+  }
+}
+    
+}
+
+
+
+/* --------------------------------------
+
+Desktop_Layout
+
+----------------------------------------*/
 
 @media only screen and (min-width: 900px){
-
     
-    #timecontainer {
-        margin-top: 20%;
-        text-align: center;
-        color: #FFFFFF;
-        font-family: arial, sans-serif;
-        font-size: 10em;
-    }
-
-    #datecontainer {
-        text-align: center;
-        color: #FFFFFF;
-        font-family: serif;
-        font-size: 3em;
-    
+    .clock {
+        height: 20vh;
+        color: white;
+        font-size: 22vh;
+        font-family: sans-serif;
+        line-height: 20.4vh;
+        display: flex;
+        position: relative;
+        overflow: hidden;
     }
     
+    .clock::before, .clock::after {
+        content: '';
+        width: 7ch;
+        height: 3vh;
+        position: absolute;
+        z-index: 2;
+        }
+
+        .clock::after {
+            bottom: 0;
+        }
+
+        .clock > div {
+            display: flex;
+        }
+
+        .tick {
+            line-height: 17vh;
+        }
+
+        .tick-hidden {
+        opacity: 0;
+        }
+
+        .move {
+            animation: move linear 1s infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateY(0vh);
+            }
+        to {
+            transform: translateY(-20vh);
+        }
 }
+
+}
+
+
+
