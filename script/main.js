@@ -79,24 +79,24 @@ document.addEventListener('DOMContentLoaded', function () {
     updateTime () 
 
         function updateTime () {
-        var now = new Date();
-        var hours = now.getHours();
+            var now = new Date();
+            var hours = now.getHours();
 
         
-        //7-18 dag
-        if (hours > 18 || hours < 7){
-            document.getElementById("body").style.backgroundImage = "#28314b";
-        }
+            //7-18 dag
+            if (hours > 17 || hours < 7) {
+                document.getElementById("body").style.backgroundColor = "#28314b";
+            }
         
         
-        //19-6 night
-        else if (hours > 6 && hours < 18){
-            document.getElementById("body").style.backgroundColor = "#97caef";
-        }
+            //19-6 night
+            else if (hours > 6 && hours < 18) {
+                document.getElementById("body").style.backgroundColor = "#97caef";
+            }
         
-        else 
-            document.getElementById("body").style.backgroundColor = "#000000";
+            else 
+                document.getElementById("body").style.backgroundColor = "#000000";
             
-        }
+            }
        
-    });
+});
