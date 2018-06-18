@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Give+You+Glory');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    color: #FFFFFF;
+    font-family: 'EB Garamond', serif;
+}
+
+h1 {
+    font-family: 'Give You Glory', cursive;
+    color: #FFFFFF;
+    font-size: 2.5em;
+}
+
+
+/* --------------------------------------
+
+Mobile_Layout
+
+----------------------------------------*/
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;   
+}
+
+#greet {
+    grid-row: 2/3;
+}
+
+#time {
+    padding-top: 10px;
+    font-size: 3.5em;
+    grid-row: 3/4;
+}
+
+#date {
+    padding-top: 10px;
+    font-size: 2em;
+    grid-row: 4/5;
+}
+
+#animatie {
+    padding-top: 25px;
+    grid-row: 1/2;
+}
+
+#sun {
+	position: relative;
+	display: none;
+}
+
+#sun img {
+	width: 50%;
+	opacity: 0.9;
+}
+
+#moon {
+	position: relative;
+	display: none;
+}
+
+#moon img {
+	width: 50%;
+	opacity: 0.9;
+}
+
+/* --------------------------------------
+
+Tablet_Layout
+
+----------------------------------------*/
+@media only screen and (min-width: 600px){
+   
+   
+    body {
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    #greet{
+        grid-row: 2/3;
+    }
+    
+    #time{
+        grid-row: 3/4;
+    }
+    
+    #date {
+        grid-row: 4/5;
+    }
+    
+    #animatie {
+        grid-row: 1/2;
+    }
+    #sun img {
+	   width: 30%;
+	   opacity: 0.9;
+    } 
+    
+    #moon img {
+	   width: 30%;
+	   opacity: 0.9;
+    }
+}
+
+/* --------------------------------------
+
+Desktop_Layout
+
+----------------------------------------*/
+
+@media only screen and (min-width: 900px){
+    
+    body {
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-rows: auto;
+        
+    }
+    
+    #greet{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #time{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    #date{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    #animatie {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    #sun img {
+	   opacity: 0.9;
+    } 
+    
+    #moon img {
+	   opacity: 0.9;
+    }
+    
+
+}
+
+
+
